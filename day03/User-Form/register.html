@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <form id="registration-form">
+        <h1>회원가입</h1>
+
+        <p class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" required>
+        </p>
+
+        <p class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p class="form-group">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+        </p>
+
+        <p class="form-group">
+            <label for="gender">성별</label>
+            <select id="gender" name="gender">
+                <option>선택하세요</option>
+                <option>남성</option>
+                <option>여성</option>
+            </select>
+        </p>
+
+        <p class="form-group">
+            <input type="submit" value="가입하기">
+            <input type="reset" value="초기화">
+        </p>
+    </form>
+</body>
+</html>

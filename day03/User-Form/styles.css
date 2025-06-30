@@ -1,0 +1,113 @@
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 태그 선택자 */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* ID 선택자 */
+#registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+/* 클래스 선택자 */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 속성 선택자 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* 후손 선택자 */
+form p {
+    padding: 5px;
+}
+
+/* 자식 선택자 */
+form > p {
+    border-bottom: 1px solid #eee;
+}
+
+/* 라벨 정렬 */
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+/* 드롭다운 메뉴 */
+select {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* =============== */
+/*     도전 과제    */
+/* =============== */
+
+/* 가상 클래스 */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+select:hover {
+    border-color: #007bff;
+}
+
+form > p:first-child {
+    margin-top: 20px;
+}
+
+select option:first-child {
+    font-weight: bold;
+}
+
+/* 가상 요소 */
+h1::after {
+    content: "✨";
+    margin-left: 10px;
+}
+
+.form-group::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+label[for="name"]::after,
+label[for="email"]::after,
+label[for="password"]::after {
+    content: "*";
+    color: red;
+    margin-left: 4px;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div style="display:flex; align-items:center;">
+            <span style="font-weight:bold; font-size:24px; 
+            margin-right:10px;">User Registration Form</span>
+            <svg width="40" height="40" aria-label="로고">
+                <circle cx="20" cy="20" r="18" stroke="black" 
+                stroke-width="2" fill="blue"/>
+            </svg>
+        </div>
+        <h1 style="margin-bottom:0;">User Registration</h1>
+        <nav style="margin-bottom:24px;">
+            <ul style="list-style:none; padding-left:0; 
+            display:flex; gap:20px;">
+                <li><a href="#" style="color:blue; 
+                text-decoration:underline;">Home</a></li>
+                <li><a href="#" style="color:blue; 
+                text-decoration:underline;">Register</a></li>
+                <li><a href="#" style="color:blue; 
+                text-decoration:underline;">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Layout: 3단 구조 -->
+    <main style="display:flex; flex-direction:row; 
+    justify-content:flex-start; 
+    align-items:flex-start; width:100vw; min-height:600px;">
+        <!-- 왼쪽: 회원가입 폼 -->
+        <section style="flex:2; min-width:320px; max-width:350px;">
+            <h2 style="margin-bottom:8px;">회원가입 폼</h2>
+            <form action="#" method="POST">
+                <div>
+                    <label for="username">이름:</label><br>
+                    <input type="text" id="username" name="username" 
+                    style="width:95%;" required>
+                </div>
+                <div>
+                    <label for="email">이메일 주소:</label><br>
+                    <input type="email" id="email" name="email"
+                     style="width:95%;" required>
+                </div>
+                <div>
+                    <label for="password">비밀번호:</label><br>
+                    <input type="password" id="password" name="password" 
+                    style="width:95%;" required>
+                </div>
+                <div>
+                    <label for="date">생년월일:</label><br>
+                    <input type="date" id="user-birthdate" name="user-birthdate" 
+                    style="width:95%;" required>
+                </div>
+                <div>
+                    <label for="age">나이:</label><br>
+                    <input type="number" id="age" name="user-age" min="1" max="100" 
+                    style="width:60px;" required>
+                </div>
+                <div>
+                    <label for="satisfaction">서비스 만족도 (1~10):</label><br>
+                    <input type="range" id="satisfaction" name="satisfaction" 
+                    min="1" max="10">
+                </div>
+                <div>
+                    <span>성별:</span><br>
+                    <label for="gender_male">
+                        <input type="radio" id="gender_male" name="gender" 
+                        value="male" required> 남성
+                    </label>
+                    <label for="gender_female">
+                        <input type="radio" id="gender_female" name="gender" 
+                        value="female"> 여성
+                    </label>
+                    <label for="gender_other">
+                        <input type="radio" id="gender_other" name="gender" 
+                        value="other"> 기타
+                    </label>
+                </div>
+                <div>
+                    <span>취미:</span><br>
+                    <label for="hobby_coding">
+                        <input type="checkbox" id="hobby_coding" name="hobby" 
+                        value="coding"> 코딩
+                    </label>
+                    <label for="hobby_gaming">
+                        <input type="checkbox" id="hobby_gaming" name="hobby" 
+                        value="gaming"> 게임
+                    </label>
+                    <label for="hobby_reading">
+                        <input type="checkbox" id="hobby_reading" name="hobby" 
+                        value="reading"> 독서
+                    </label>
+                </div>
+                <div>
+                    <label for="nationality">국가:</label><br>
+                    <select id="nationality" name="nationality" 
+                    style="width:97%;" required>
+                        <option value="">--국가를 선택하세요--</option>
+                        <option value="KR">대한민국</option>
+                        <option value="US">미국</option>
+                        <option value="JP">일본</option>
+                        <option value="CN">중국</option>
+                        <option value="UK">영국</option>
+                    </select>
+                </div>
+                <div style="margin-top:10px;">
+                    <button type="submit">제출</button>
+                    <button type="reset">초기화</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 중앙: 영상/미디어 -->
+        <section style="flex:2; display:flex; flex-direction:column; 
+        align-items:center; min-width:350px;">
+            <div style="margin-top:44px;">
+                <video src="Media/sample.mp4" controls width="320" 
+                style="border:1px solid #222; background:#eee;">
+                    브라우저가 비디오 태그를 지원하지 않습니다.
+                </video>
+                <audio src="Media/sample.mp3" controls style="display:block; 
+                margin-top:8px; width:320px;">
+                    브라우저가 오디오 태그를 지원하지 않습니다.
+                </audio>
+            </div>
+        </section>
+
+        <!-- 오른쪽: 팁, SVG, 안내글 -->
+        <aside style="flex:3; min-width:340px; margin-left:24px;">
+            <div style="display:flex; flex-direction:column; 
+            align-items:flex-start;">
+                <!-- 꿀팁 제목 및 바로 아래에 리스트! -->
+                <h3 style="flex:6; margin-bottom:0; 
+                margin-top:44px;">회원가입 꿀팁</h3>
+                <ul style="margin-top:0; margin-bottom:24px;">
+            <br>
+                    <li>이메일 주소는 정확하게 입력하세요.</li>
+                    <li>비밀번호는 안전하게 설정하세요.</li>
+                    <li>모든 필수 항목을 빠짐없이 입력하세요.</li>
+                </ul>
+            </div>
+            <!-- SVG 사각형 -->
+            <svg width="60" height="60" style="margin-bottom:24px;">
+                <rect x="5" y="5" width="50" height="50" fill="green" 
+                stroke="black" stroke-width="3"/>
+            </svg>
+
+            <!-- 안내글/문의 (이미지처럼 오른쪽에) -->
+            <div style="margin-left:0;">
+                <h2 style="margin-bottom:8px; margin-top:0;">
+                    왜 회원가입을 해야 하나요?</h2>
+                <p style="margin-top:0; margin-bottom:6px;">
+                    회원가입을 통해 맞춤 서비스를 이용하실 수 있으며,<br>
+                    다양한 혜택과 최신 정보를 받아보실 수 있습니다.<br>
+                    궁금한 점이 있으면 언제든 문의해 주세요.
+                </p>
+                <input type="text" style="width:180px;" 
+                placeholder="문의사항을 입력하세요">
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top:40px; text-align:center;">
+        <p>© 2025 User Registration Form</p>
+        <a href="mailto:tears0427@gamil.com">
+            이메일 문의</a> | <a href="#">개인정보 처리방침</a>
+        <br><br>
+    </footer>
+</body>
+</html>
